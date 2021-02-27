@@ -1,6 +1,8 @@
-def print_hi(name):
-    print(f"Hello {name}")
+from configparser import ConfigParser
 
 
 if __name__ == '__main__':
-    print_hi('Tamerlane lets')
+    cfg = ConfigParser()
+    cfg.read('./config/secret.ini')
+    cfg.read('./config/config.ini')
+    print(cfg.get('main', 'token'))
