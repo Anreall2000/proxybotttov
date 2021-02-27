@@ -52,6 +52,7 @@ def tg_polling():
 if __name__ == '__main__':
     Thread(target=vk_polling).start()
     Thread(target=tg_polling).start()
+    # trash but
     # loop = asyncio.get_event_loop()
     # cors = asyncio.wait([vk_polling(), tg_polling()])
     # loop.run_until_complete(cors)
